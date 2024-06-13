@@ -1,0 +1,16 @@
+A: Hyundai i10
+B: Hyundai Getz
+C: Hyundai Solaris
+D: Hyundai Elantra
+E: Hyundai Sonata
+F: Hyundai Azera
+G: Hyundai Creta
+H: Hyundai Tuscani
+J: Hyundai Tucson
+K: Hyundai Solaris 2
+M: Hyundai Santamo
+N: Hyundai Terracan
+P: Hyundai Matrix
+R: Hyundai Grace
+S: Hyundai Santa Fe
+W: Hyundai Starex

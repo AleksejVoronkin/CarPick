@@ -1,0 +1,22 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: ApiGateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: CarPick1Root
+          uri: lb://CarPick1
+          predicates:
+            - Path=/CarPick1/**
+          filters:
+            - RewritePath=/CarPick1/(?<segment>.*), /${segment}
+        - id: CarPickKia1Root
+          uri: lb://CarPickKia1
+          predicates:
+            - Path=/CarPickKia1/**
+          filters:
+            - RewritePath=/CarPickKia1/(?<segment>.*), /${segment}

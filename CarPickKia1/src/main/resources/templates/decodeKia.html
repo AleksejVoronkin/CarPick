@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>VIN Decoded Information</title>
+</head>
+<body>
+<h1>Информация из VIN</h1>
+<p>Manufacturer Identifier: <span th:text="${ManufacturerIdentifier}"></span></p>
+<p>Модель: <span th:text="${ModelSeries}"></span></p>
+<p>Комплектация: <span th:text="${Configuration}"></span></p>
+<p>Кузов: <span th:text="${BodyType}"></span></p>
+<p>Безопастность: <span th:text="${Safety}"></span></p>
+<p>Тип двигателя: <span th:text="${EngineType}"></span></p>
+<p>Год выпуска: <span th:text="${ModelYear}"></span></p>
+<p>Место производства: <span th:text="${PlaceOfProduction}"></span></p>
+
+<form action="/ToParts" method="get">
+    <input type="hidden" name="modelSeries" th:value="${ModelSeries}"/>
+    <input type="hidden" name="engineType" th:value="${EngineType}"/>
+    <button type="submit">Посмотреть детали ТО</button>
+</form>
+</body>
+</html>

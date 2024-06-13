@@ -1,0 +1,17 @@
+Z94: Hyundai/KIA Россия
+
+KNA: KIA Корея
+KNE: KIA Корея
+KNB: KIA Корея
+KNC: KIA Корея
+
+MZB: KIA Индия
+
+TMA: Kia Motors, Чехия
+U5Y: Kia Motors, Словакия
+U6Y: Kia Motors, Словакия
+U7Y: Kia Motors, Словакия
+
+X7M: Россия (тагаз)
+X4X: Россия (тагаз)
+XWE: Hyundai/KIA Россия

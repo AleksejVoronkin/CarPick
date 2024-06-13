@@ -1,0 +1,3 @@
+T: Base
+U: Comfort
+S: Eco

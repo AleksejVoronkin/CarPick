@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали ТО</title>
+</head>
+<body>
+<h1>Детали ТО</h1>
+<div th:if="${errorMessage}">
+    <p th:text="${errorMessage}" style="color:red;"></p>
+</div>
+<div th:if="${message}">
+    <p th:text="${message}" style="color:green;"></p>
+</div>
+<ul>
+    <li th:each="part : ${toParts}" th:text="${part}"></li>
+</ul>
+<form action="/ToPartsKia" method="get">
+    <input type="hidden" name="modelSeries" th:value="${modelSeries}"/>
+    <input type="hidden" name="engineType" th:value="${engineType}"/>
+    <label for="email">Email для отправки:</label>
+    <input type="email" name="email" id="email" required>
+    <button type="submit">Отправить на Email</button>
+</form>
+</body>
+</html>

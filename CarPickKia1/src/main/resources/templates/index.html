@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>VIN Decoder</title>
+</head>
+<body>
+<h1>VIN Decoder</h1>
+<form action="/decode" method="post">
+    <label for="vin">Введите VIN:</label>
+    <input type="text" id="vin" name="vin">
+    <button type="submit">Расшифровать</button>
+</form>
+<p>Пожалуйста, пишите VIN номер большими буквами английского языка. В VIN номере не используются буквы: O, I, Q.</p>
+</body>
+</html>

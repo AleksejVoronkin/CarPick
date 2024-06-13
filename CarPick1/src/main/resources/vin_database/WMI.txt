@@ -1,0 +1,7 @@
+Z94: Hyundai/KIA Россия
+X7M: Hyundai Россия (тагаз)
+KMH: Hyundai Корея
+KNH: Hyundai Корея
+NLH: Hyundai Турция
+KM8: Hyundai Корея
+MAL: Hyundai Индия
