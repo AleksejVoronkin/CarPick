@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WelcomeController {
+
     @GetMapping("/")
     public String index() {
         return "index";
@@ -14,9 +15,9 @@ public class WelcomeController {
     @GetMapping("/redirect")
     public String redirect(@RequestParam String service) {
         if ("CarPick1".equals(service)) {
-            return "redirect:/CarPick1/";
+            return "redirect:http://localhost:8081/";
         } else if ("CarPickKia1".equals(service)) {
-            return "redirect:/CarPickKia1/";
+            return "redirect:http://localhost:8082/";
         }
         return "index";
     }

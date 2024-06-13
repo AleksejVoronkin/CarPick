@@ -4,19 +4,33 @@ server:
 spring:
   application:
     name: ApiGateway
-
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
-        - id: CarPick1Root
-          uri: lb://CarPick1
+        - id: CarPick1_root
+          uri: http://localhost:8081
           predicates:
-            - Path=/CarPick1/**
-          filters:
-            - RewritePath=/CarPick1/(?<segment>.*), /${segment}
-        - id: CarPickKia1Root
-          uri: lb://CarPickKia1
+            - Path=/
+        - id: CarPick1_decode
+          uri: http://localhost:8081
           predicates:
-            - Path=/CarPickKia1/**
-          filters:
-            - RewritePath=/CarPickKia1/(?<segment>.*), /${segment}
+            - Path=/decode
+        - id: CarPick1_toPart
+          uri: http://localhost:8081
+          predicates:
+            - Path=/toPart
+        - id: CarPickKia1_root
+          uri: http://localhost:8082
+          predicates:
+            - Path=/
+        - id: CarPickKia1_decode
+          uri: http://localhost:8082
+          predicates:
+            - Path=/decodeKia
+        - id: CarPickKia1_toPart
+          uri: http://localhost:8082
+          predicates:
+            - Path=/toPartKia

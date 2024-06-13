@@ -15,7 +15,7 @@
 <p>Год выпуска: <span th:text="${ModelYear}"></span></p>
 <p>Место производства: <span th:text="${PlaceOfProduction}"></span></p>
 
-<form action="/ToParts" method="get">
+<form action="/ToPartsKia" method="get">
     <input type="hidden" name="modelSeries" th:value="${ModelSeries}"/>
     <input type="hidden" name="engineType" th:value="${EngineType}"/>
     <button type="submit">Посмотреть детали ТО</button>

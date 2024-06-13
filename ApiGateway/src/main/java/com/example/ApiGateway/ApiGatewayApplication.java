@@ -17,12 +17,18 @@ public class ApiGatewayApplication {
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
-				.route("CarPick1", r -> r.path("/CarPick1/**")
-						.filters(f -> f.rewritePath("/CarPick1/(?<segment>.*)", "/${segment}"))
-						.uri("lb://CarPick1"))
-				.route("CarPickKia1", r -> r.path("/CarPickKia1/**")
-						.filters(f -> f.rewritePath("/CarPickKia1/(?<segment>.*)", "/${segment}"))
-						.uri("lb://CarPickKia1"))
+				.route("CarPick1_root", r -> r.path("/")
+						.uri("http://localhost:8081/"))
+				.route("CarPick1_decode", r -> r.path("/decode")
+						.uri("http://localhost:8081/decode"))
+				.route("CarPick1_toPart", r -> r.path("/toPart")
+						.uri("http://localhost:8081/toPart"))
+				.route("CarPickKia1_root", r -> r.path("/")
+						.uri("http://localhost:8082/"))
+				.route("CarPickKia1_decode", r -> r.path("/decode")
+						.uri("http://localhost:8082/decode"))
+				.route("CarPickKia1_toPart", r -> r.path("/toPart")
+						.uri("http://localhost:8082/toPart"))
 				.build();
 	}
 }
